@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Oficina da Net Formul&aacute;rio de Contato em PHP</title>
+    <meta charset="iso-8859-1">
+    <link rel="stylesheet" href="Style Teste 2.css" media="all" />
+
+</head>
+<body>
+    <h2>Formul&aacute;rio de contato - <a href="http://www.oficinadanet.com.br">Oficina da Net</a></h2>
+    <form method="post" onsubmit="validaForm(); return false;" class="form" >
+    <p class="name">
+        <label for="name">Nome</label>
+        <input type="text" placeholder="Seu Nome" />
+    </p>
+    <p class="email">
+        <label for="email">E-mail</label>
+        <input type="text" placeholder="mail@exemplo.com.br" />
+    </p>
+    <p class="text">
+        <label for="mensagem">Mensagem</label>
+        <textarea placeholder="Escreva sua mensagem" /></textarea>
+    </p>
+    <p class="submit">
+        <input type="submit" value="Enviar" />
+    </p>
+    </form>
+	<script type="text/javascript">
+ function validaForm()
+ {
+    erro = false;
+    if($('#nome').val() == '')
+    {
+        alert('Voc&ecirc; precisa preencher o campo Nome');erro = true;
+    }
+    if($('#email').val() == '' &amp;&amp; !erro)
+    {
+        alert('Voc&ecirc; precisa preencher o campo E-mail');erro = true;
+    }
+    if($('#mensagem').val() == '' &amp;&amp; !erro)
+    {
+        alert('Voc&ecirc; precisa preencher o campo Mensagem');erro = true;
+    }
+
+    //se nao tiver erros
+    if(!erro)
+    {
+        $('#formulario_contato').submit();
+    }
+ }
+</script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<!-- Scripts by hscripts.com -->
+<!-- Copywrite of HIOXINDIA -->
+<!-- More scripts @ www.hscripts.com -->
+
+<script language="javascript" type="text/javascript">
+var temp;
+function w_onload()
+{ frm.txt.value=0; }
+function addchar(input,character)
+{ if(input.value == null || input.value == "0")
+input.value = character
+else
+input.value += character }
+function cancel_click()
+{
+frm.txt.value=0;
+}
+function sin_click(obj)
+{
+if(obj=='sin')
+var result=frm.txt.value;
+if(document.frm.deg[0].checked)
+{
+result=result*Math.PI/180;
+frm.txt.value=Math.sin(result).toFixed(2);
+}
+if(document.frm.deg[1].checked)
+frm.txt.value=Math.sin(result).toFixed(2);
+}
+function cos_click(obj)
+{
+if(obj=='cos')
+var result=frm.txt.value;
+if(document.frm.deg[0].checked)
+{
+result=result*Math.PI/180;
+frm.txt.value=Math.cos(result).toFixed(2);
+}
+if(document.frm.deg[1].checked)
+frm.txt.value=Math.cos(frm.txt.value);
+}
+function tan_click(obj)
+{
+if(obj=='tan')
+var result=frm.txt.value;
+if(document.frm.deg[0].checked)
+{
+result=result*Math.PI/180;
+frm.txt.value=Math.tan(result).toFixed(2);
+}
+if(document.frm.deg[1].checked)
+frm.txt.value=Math.tan(frm.txt.value);
+}
+function resi_click()
+{
+temp= frm.txt.value;
+frm.txt.value=1/temp;
+}
+function log_click()
+{
+frm.txt.value=Math.log(frm.txt.value)/Math.LN10;
+}
+function sqr_click()
+{
+temp=frm.txt.value;
+frm.txt.value=temp*temp;
+}
+function sqrt_click()
+{
+frm.txt.value=Math.sqrt(frm.txt.value);
+}
+function equal_click()
+{
+frm.txt.value=eval(frm.txt.value);
+}
+function exp_click()
+{
+frm.txt.value=Math.exp(frm.txt.value);
+}
+function fac_click()
+{
+var f=1;
+var i;
+var n=parseInt(frm.txt.value);
+for(i=1;i<=n;i++)
+{
+f=f*i;
+}
+frm.txt.value=f;
+}
+function bks_click()
+{
+var s;
+s=frm.txt.value;
+if(s>=1)
+{
+var b=s.substr(0,s.length-1);
+frm.txt.value=b;
+}
+}
+function sign_click()
+{
+if(isNaN(frm.txt.value)==false)
+{
+if(frm.txt.value>0)
+{ 
+frm.txt.value=frm.txt.value*-1
+}
+else if(frm.txt.value<0)
+{ 
+frm.txt.value=frm.txt.value.replace('-','')
+}
+}
+}
+function ln_click()
+{
+frm.txt.value=Math.log(frm.txt.value);
+}
+function lb_click()
+{
+frm.txt.value=Math.log(frm.txt.value)/Math.LN2;
+}
+</script> 
+<body onload="w_onload()">
+<form name="frm" action="">
+<center>
+<table style="border:solid green 1px">
+<tr>
+<td>
+<input type="text" maxlength="10" name="txt" size="31"><br>
+</td>
+</tr>
+<tr>
+<td>
+<font size=1.5px><input type="radio" name=deg value="Degree">Degrees</input>
+<input type="radio" name=deg value="Radian" checked>Radians</input>
+<a style="text-decoration:none;" href="http://www.hscripts.com">   H</a></font>
+</td></tr>
+<tr>
+<td>
+<input type="button" name="sqr" value="sqr" style="width:30px;height:32px" onclick="sqr_click()">
+<input type="button" name="sqt" value="sqt" style="width:30px;height:32px" onclick="sqrt_click()">
+<input type="button" name="exp" value="exp" style="width:30px;height:32px" onclick="exp_click()">
+<input type="button" name="fac" value="x!" style="width:30px;height:32px" onclick="fac_click()">
+<input type="button" name="bks" value="bks" style="width:30px;height:32px" onclick="bks_click()">
+<input type="button" name="cancel" value="clr" style="width:30px;height:32px" onclick="cancel_click()">
+</td></tr>
+<tr>
+<td>
+<input type="button" name="one" value="1" style="width:30px;height:32px" onclick="addchar(this.form.txt,'1')">
+<input type="button" name="two" value="2" style="width:30px;height:32px" onclick="addchar(this.form.txt,'2')">
+<input type="button" name="three" value="3" style="width:30px;height:32px" onclick="addchar(this.form.txt,'3')">
+<input type="button" name="add" value="+" style="width:30px;height:32px" onclick="addchar(this.form.txt,'+')">
+<input type="button" name="sin" value="sin" style="width:30px;height:32px" onclick="sin_click('sin')">
+<input type="button" name="log" value="log" style="width:30px;height:32px" onclick="log_click()">
+</td></tr>
+<tr>
+<td>
+<input type="button" name="four" value="4" style="width:30px;height:32px" onclick="addchar(this.form.txt,'4')">
+<input type="button" name="five" value="5" style="width:30px;height:32px" onclick="addchar(this.form.txt,'5')">
+<input type="button" name="six" value="6" style="width:30px;height:32px" onclick="addchar(this.form.txt,'6')">
+<input type="button" name="sub" value="-" style="width:30px;height:32px" onclick="addchar(this.form.txt,'-')">
+<input type="button" name="cos" value="cos" style="width:30px;height:32px" onclick="cos_click('cos')">
+<input type="button" name="ln" value="ln" style="width:32px;height:32px" onclick="ln_click()">
+</td></tr>
+<tr>
+<td>
+<input type="button" name="seven" value="7" style="width:30px;height:32px" onclick="addchar(this.form.txt,'7')">
+<input type="button" name="eight" value="8" style="width:30px;height:32px" onclick="addchar(this.form.txt,'8')">
+<input type="button" name="nine" value="9" style="width:30px;height:32px" onclick="addchar(this.form.txt,'9')">
+<input type="button" name="mul" value="*" style="width:30px;height:32px" onclick="addchar(this.form.txt,'*')">
+<input type="button" name="tan" value="tan" style="width:30px;height=32px" onclick="tan_click('tan')">
+<input type="button" name="lb" value="lb" style="width:30px;height:32px" onclick="lb_click()">
+</td></tr>
+<tr>
+<td>
+<input type="button" name="zero" value="0" style="width:30px;height:32px" onclick="addchar(this.form.txt,'0')">
+<input type="button" name="dot" value="." style="width:30px;height:32px" onclick="addchar(this.form.txt,'.')">
+<input type="button" name="equal" value="=" style="width:30px;height:32px" onclick="equal_click()">
+<input type="button" name="div" value="/" style="width:30px;height:32px" onclick="addchar(this.form.txt,'/')">
+<input type="button" name="sign" value="+/-" style="width:30px;height:32px" onclick="sign_click()">
+<input type="button" name="resi" value="1/x" style="width:30px;height:32px" onclick="resi_click()">
+</td></tr>
+</table>
+</center>
+</form>
+</body>
+<!-- Scripts by hscripts.com -->  
+
+
+
+</html>

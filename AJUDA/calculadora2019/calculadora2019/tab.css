@@ -1,0 +1,17 @@
+<style type="text/css">
+table {
+	border-collapse:collapse;
+	border:1px solid #CCC;
+}
+
+#tabela tr {
+	border:1px solid #CCC;
+}
+
+#tabela td {
+	width:30px;
+	height:30px;
+	padding:10px;
+	border:1px solid #CCC;
+}
+</style>h     
