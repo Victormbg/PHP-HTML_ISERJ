@@ -1,0 +1,9 @@
+<html>
+<head>
+<title>Comando de seleção compassagem de valor</title>
+
+</head>
+<body>
+<form name="frm1" method="get"
+action="scriptIdade.php">
+Nome<br>
