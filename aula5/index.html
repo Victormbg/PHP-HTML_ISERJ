@@ -1,0 +1,28 @@
+﻿<html lang="pt-br">
+<head>
+<title>CALCULADORA</title>
+<meta charset="utf-8">
+</head>
+<body>
+<form method="POST" action = "script.php">
+<label>Operação 1</label><br>
+<input type="text" name="num1"/><br>
+<label>Operação 2</label><br>
+<input type="text" name="num2"/><br>
+<br>
+                <select name="op">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+	        </select>
+
+<br>
+
+<input type="submit" value="Calcular" />
+<input type = "reset" value = "Limpar"/><br>
+<label>O resultado é: </label>
+<?php echo htmlentities($res); ?>
+</form>
+</body>
+</html>
