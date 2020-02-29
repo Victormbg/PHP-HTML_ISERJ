@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FORMULARIO</title>
+<style>
+label{
+color:red;
+font-size:25px;
+padding:5px;
+}
+body{
+background-image: url("a.jpg");
+background-repeat: no-repeat, repeat;
+}
+</style>
+</head>
+<body>
+<form name = "frm1" method= "GET" action = "script.php">
+<label>Nome:</label>
+<input type = "text" name = "tNome" /><br>
+
+<label>Nota 1:</label>
+<input type = "number" name = "tNota1" /><br>
+
+<label>Nota 2:</label>
+<input type = "number" name = "tNota2"/><br>
+
+<label>Curso:<br></label>
+<label>
+<input type = "radio" name = "rbcurso" checked = "checked" value = "tInf" />Informatica<br>
+<input type = "radio" name = "rbcurso" value = "tAdm"/>Administração
+</label>
+<br>
+<select name="disc">
+<option name="LP1">LP1</option>
+<option name="contabilidade">Contabilidade</option>
+<option name="MD2">MD2</option>
+<option name="economia">Economia</option>
+</select><br>
+<input type = "submit" name = "btn1" value = "Executar"/>
+<input type = "reset" name = "btn2" value = "Limpar"/>
+</form>
+</body>
+</html>
